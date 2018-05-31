@@ -18,7 +18,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 
 const appRoutes = [
   { path:"", component: InicioComponent },
-  { path:"listadoremiseros", component: ListadoRemiserosComponent },
+  { path:"listadoremiseros", component: ListadoRemiserosComponent, canActivate:[AuthService]},
   { path:"listadoviajes", component: ListadoViajesComponent },
   { path:"**", component: Error404Component }
 ]
